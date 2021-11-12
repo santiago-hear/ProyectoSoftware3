@@ -24,3 +24,7 @@ Route::prefix('dashboard')->group(function() {
     Route::resource('post', PostController::class);
     Route::resource('category', CategoryController::class);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
