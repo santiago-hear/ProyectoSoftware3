@@ -9,6 +9,11 @@ use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'rol.pub']);
+        //$this->middleware(['auth','rol.pub']);
+    }
     /**
      * Display a listing of the resource.
      *

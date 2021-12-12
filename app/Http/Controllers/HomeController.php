@@ -13,6 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        // $this->middleware('auth')->only('index', 'show');
+        // $this->middleware('auth')->except('create', 'store', 'update', 'edit', 'destroy');
         $this->middleware('auth');
     }
 
